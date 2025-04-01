@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Menu</title>
+    <link rel="stylesheet" href="practice10.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="#MindSeeds">MindSeeds</a></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Content">Content</a></li>
+                <li><a href="#Reviews">Reviews</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Terms">Terms</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><img height="35px" width="35px" src="https://cdn-icons-png.freepik.com/256/15707/15707869.png" alt="Instagram"></li>
+                <li><img height="35px" width="35px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/800px-2021_Facebook_icon.svg.png" alt="Facebook"></li>
+                <!-- Menu Button -->
+                <button onclick="toggleMenu()">Menu</button>
+                <ul id="menu-dropdown" class="dropdown-content">
+                    <li><a href="#Help">Help</a></li>
+                        <li><a href="#Address">Address</a></li>
+                    <li><a href="#ReachUs">Reach Us</a></li>
+                </ul>
+
+                <script>
+                function toggleMenu() {
+                        var dropdown = document.getElementById("menu-dropdown");
+                        dropdown.classList.toggle("show");
+                    }
+                </script>
+        </div>
+    </div>
+    <div class="form">
+        <form action="survy.com">
+            <h2 align="center"><b>survy form</b></h2>
+            <p align="center">user stories survy form</p>
+            <p align="center">Name: <input type="text" placeholder="enter name"> </p>
+            <p align="center">Gmail: <input type="text" placeholder="enter Gmail"> </p>
+            <p align="center">Work exprience: <input type="text" placeholder="enter your exprience"></p>
+            <p align="center">Are you comfortable in investing in real state on plateform without first investing properly
+                <select align="center">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </p>
+            <h5 align="center">You are ready to invest:
+                <br>
+                <label align="center" for="Real state">
+                    <input align="center" type="checkbox" name="Real state" value="invest" id="101">Real state
+                </label>
+                <br>
+                <label align="center" for="Mutual fund">
+                    <input align="center" type="checkbox" name="Mutual fund" value="invest" id="102">Mutual fund
+                </label>
+                <br>
+                <label align="center" for="Cripto currency">
+                    <input align="center" type="checkbox" name="Cripto currency" value="invest" id="103">Cripto currency
+                </label>
+                <br>
+                <label align="center" for="Stock and bonds">
+                    <input align="center" type="checkbox" name="Stock and bonds" value="invest" id="104">Stock and bonds
+                </label>
+            </h5> 
+            <p align="center">Are you ready for further contact:
+                <input type="radio" name="contact" value="Yes" checked="checked" />Yes
+                <input type="radio" name="contact" value="No" checked="checked" />No
+            </p>
+            <center> <input type="submit" value="submit"> </center>
+        </form> 
+        </div>
+</body>
+</html>

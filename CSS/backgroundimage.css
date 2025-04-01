@@ -1,0 +1,20 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    color: white;
+    display: inline-block;
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+
+#box1 {
+    background-image: url("../Assets/fish_image.jpg");
+    background-size: cover;
+}
+#box2 {
+    background-image: url("../Assets/ravi_image.jpg");
+    background-size: cover;
+}

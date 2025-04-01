@@ -1,0 +1,39 @@
+div {
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    background-color: aqua;
+    border: 1vh solid black;
+    display: flex;
+    justify-content: center;
+    direction: row;
+    align-items: center;
+    font-size: large;
+    transition: fontsize 2s linear 10;
+}
+#box {
+    width: 5vh;
+    height: 5vh;
+    background-color: rgba(200, 200, 100 ,1);
+    border: 0.5vh solid black;
+}
+@media (min-width: 200px) 
+{
+    div {
+        background-color: brown;
+    }
+}
+@media (max-width: 600px)
+{
+    div {
+        background-color: blue;
+    }
+}
+div:hover {
+    background-color: red;
+    font-size: 40px;
+}
+div:active {
+    background-color: green;
+}
+

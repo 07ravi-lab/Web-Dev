@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="www.example.com" method="get">
+        <fieldset>
+            <legend>
+                Your Details:
+            </legend>
+            <label>
+                Name:
+                <input type="text" name="name" size="30" max="100">
+            </label>
+            <br />
+            <label>
+                Email:
+                <input type="email" name="email" size="30" maxlength="100">
+            </label>
+            <br />
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>
+                Your Review:
+            </legend>
+            <p>
+            <label for="hear about">
+                How did you hear about us?
+            </label>
+            <select name="refferer" id="hear about">
+                <option value="google">Google</option>
+                <option value="friend">Friend</option>
+                <option value="advert">Advert</option>
+                <option value="other">Other</option>
+            </select>
+            </p>   
+            <p>
+                Would you visit again?
+                <br />
+                <label>
+                    <input type="radio" name="rating" value="yes" />
+                    Yes
+                </label>
+                <lavel>
+                    <input type="radio" name="rating" value="no" />
+                    No
+                </lavel>
+                <label>
+                    <input type="radio" name="rating" value="maybe" />
+                    Maybe
+                </label>
+            </p>
+            <p>
+                <label for="comments">
+                    Coments:
+                </label>
+                <br />
+                <textarea row="4" cols="40" id="coments">
+                </textarea>
+            </p> 
+            <label>
+                <input type="checkbox" name="subscribe" checked="checked" />
+                Sign me up for email updates
+            </label> 
+            <br />   
+            <input type="submit" value="submit review" />
+        </fieldset>
+    </form>
+</body>
+<html>
+    

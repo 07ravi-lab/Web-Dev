@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Rocket Firework Animation</title>
+    <style>
+        /* General styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffcc33;
+            background-image: url("../Assets/daksha_image.jpg");
+            background-size: cover;
+        }
+
+        /* Text styling */
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            text-shadow: 2px 2px 10px #ff9933;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Rocket firework styling */
+        .rocket {
+            position: absolute;
+            width: 4px;
+            height: 20px;
+            background: #ff9933;
+            bottom: 0;
+            border-radius: 50%;
+            animation: shoot 1s ease-out forwards;
+        }
+
+        /* Rocket trail */
+        .trail {
+            position: absolute;
+            width: 2px;
+            height: 10px;
+            background: #ff3333;
+            bottom: 0;
+            opacity: 0.7;
+            animation: trail 1s ease-out forwards;
+        }
+
+        /* Explosion effect */
+        .explosion {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #ff6600;
+            border-radius: 50%;
+            opacity: 0;
+            animation: explode 0.6s ease-out forwards;
+        }
+
+        /* Rocket shoot animation */
+        @keyframes shoot {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Rocket trail animation */
+        @keyframes trail {
+            0% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-90vh);
+                opacity: 0;
+            }
+        }
+
+        /* Explosion animation */
+        @keyframes explode {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(5);
+            }
+        }
+    </style>
+</head>
+<body style="background-image: url('../Assets/daksha_image.jpg');">
+
+    <h1>HAPPY DIWALI DAKSHA</h1>
+
+    <div id="rocket-container"></div>
+
+    <script>
+        // Function to create a rocket
+        function launchRocket() {
+            const rocket = document.createElement("div");
+            rocket.classList.add("rocket");
+            const trail = document.createElement("div");
+            trail.classList.add("trail");
+
+            // Set random horizontal position for the rocket
+            const randomX = Math.random() * 100;
+            rocket.style.left = randomX + "vw";
+            trail.style.left = randomX + "vw";
+
+            document.getElementById("rocket-container").appendChild(rocket);
+            document.getElementById("rocket-container").appendChild(trail);
+
+            // Trigger explosion after the rocket reaches the top
+            setTimeout(() => {
+                createExplosion(randomX);
+                rocket.remove();
+                trail.remove();
+            }, 1000);
+        }
+
+        // Function to create explosion effect
+        function createExplosion(x) {
+            for (let i = 0; i < 10; i++) {
+                const explosion = document.createElement("div");
+                explosion.classList.add("explosion");
+
+                // Randomize explosion position around the rocket
+                explosion.style.left = x + (Math.random() * 4 - 2) + "vw";
+                explosion.style.top = Math.random() * 20 + "vh";
+
+                document.getElementById("rocket-container").appendChild(explosion);
+
+                // Remove explosion after animation
+                setTimeout(() => {
+                    explosion.remove();
+                }, 600);
+            }
+        }
+
+        // Launch rockets at intervals
+        setInterval(launchRocket, 1000);
+    </script>
+
+</body>
+</html>

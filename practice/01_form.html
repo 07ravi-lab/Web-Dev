@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <form action=".phg">
+        <h1>forms in html</h1>
+        <div>
+            <label for="name">name</label>
+            <input id="name" type="text" placeholder="enter your name"
+            required>
+        </div>
+        <div>
+            <label for="phone">phone</label>
+            <input id="phone" type="tel" placeholder="enter your name" 
+            required>
+        </div>
+        <div>
+            <label for="email">email</label>
+            <input id="email" type="email" placeholder="enter your email" 
+            required>
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input id="password" type="password" placeholder="enter your email" required>
+        </div>
+        <div>
+            <label for="dob">Date of birth</label>
+            <input id="email" type="date" 
+            required>
+        </div>
+        <!-- select gender -->
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+            <option value="disabled select">Select Gender
+            </option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            </select>
+        </div>
+        <!-- use radio for choose one option -->
+        <div>
+            <p>Subscripation</p>
+            <input type="radio" name="Subscripation" id="basic"
+             value="basic">
+             <label for="basic">Basic</label>
+             <input type="radio" id="premium" name="Subscripation"
+             value="premium">
+             <label for="premium">premium</label>
+             <input type="radio" id="vip" name="Subscripation"
+             value="vip">
+             <label for="vip">Vip</label>
+        </div>
+        <!-- checkbox -->
+        <div>
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree to term and condition</label>
+        </div>
+
+        <div>
+            <label for="comments">comments</label>
+            <textarea id="comments" placeholder="Enter your comments" 
+            rows="4"></textarea>
+        </div>        
+        <!-- submit button       -->
+         <div>
+            <button type="submit">Submit</button>
+         </div>
+    </form>
+</body>
+</html>

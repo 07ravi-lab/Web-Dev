@@ -1,0 +1,50 @@
+div {
+    height: 10vh;
+    width: 210vh;
+    background-color: magenta;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}  
+li {
+    list-style: none;
+    font-size: 3vh;
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+li:hover {
+    text-decoration:underline;
+    color: chocolate;
+}
+li:active {
+    background-color: rgb(217, 233, 182);
+    text-decoration:underline;
+    color: black;
+}
+ @media (min-width:5vh);
+ {
+    div {
+        background-color: chartreuse;
+        color: burlywood;
+    }
+ }
+ @media (min-width:5vh);
+ {
+    div {
+        background-color: rgba(79, 13, 232, 0.331);
+        color: rgb(181, 102, 149);
+    }
+ }
+ .container {
+    /* background-color: rgb(194, 148, 87); */
+    /* width: 210vh; */
+    /* height: 20vh; */
+    background-image: url("../Assets/ravi_image.jpg");
+    background-size: cover;
+    ba
+ } 
+
+

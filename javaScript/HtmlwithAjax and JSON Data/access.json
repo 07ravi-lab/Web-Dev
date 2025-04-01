@@ -1,0 +1,27 @@
+{
+    "name": "Ravi",
+    "age": 20,
+    "city": "Bihar",
+    "country": "India",
+    "mobile": "9142357517",
+    "email": "ravi@gmail.com",
+    "address": {
+        "street": "Sector 7",
+        "apartment": "Flat 101",
+        "city": "Bihar",
+        "pincode": 841205
+    },
+    "skills": [
+        "Java",
+        "C",
+        "JavaScript",
+        {
+            "Frameworks and Tools": "VS Code, Intel Idea, Git, GitHub"
+        }
+    ],
+    "hobbies": [
+        "Coding",
+        "Reafing",
+        "Watching Movies"
+    ]
+}

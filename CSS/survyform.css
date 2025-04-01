@@ -1,0 +1,18 @@
+body {
+    background-color: #700360;
+}
+div {
+    border-width: 4px;
+    border-style: solid;
+    border-color: #2d0202;
+    background-color: white;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+div2 {
+    background-color: #c0640f;
+}

@@ -1,0 +1,8 @@
+#box {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(19, 143, 143);
+    text-align: center;
+    color: white;
+    border: 1 px solid black;
+}

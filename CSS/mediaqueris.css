@@ -1,0 +1,46 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(234, 24, 59);
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 50%;
+    /* transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in; */
+    /* transition: font-size 2s ease-in-out 0.2s;  */
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    /* transform: rotate(360deg); */
+    /* transition: all 2s ease-in-out; */
+    animation-name: colorAnimate;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+@keyframes colorAnimate {
+    0%{
+        left: 0px;
+        background-color:rgb(234, 24, 59);}
+    50%{
+        background-color: chartreuse;
+    }
+    100%{
+        left: 200px;
+        background-color: rgb(11, 11, 213);} 
+}
+
+div:hover {
+    background-color: rgb(5, 115, 16); 
+    color: rgb(132, 5, 88);
+    font-size: 20px;
+    /* transform: scaleY(2); */
+    /* transform: translate(100px,80PX);
+    transform: skew(90deg); */
+}
+div:active {
+     background-color: blue; 
+    color: chartreuse;
+} 
